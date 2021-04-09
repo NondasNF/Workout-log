@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    <meta name="viewport" content="-">
+    <title>Workout Log</title>
+</head>
+<body>
+   <div>
+    <h1>Workout Log</h1>
+    <p>Intert on item</p>
+    <br>
+   </div>  
+
+   <form>
+       <fieldset>
+           <div>
+                <label>Tempo</label>
+                <input type="integer" placeholder="Duração da atividade..." id="myInput">
+                <select name="tipoAtv" id="tipoAtv">
+                    <option>Correr</option>
+                    <option>Nadar</option>
+                    <option>Bike</option>
+                </select>
+                <label>Data</label>
+                <input type="date" name="dataAtv" id="dataAtv">
+                <button type="button" id="addAtv" onclick="Evento()" >Add</button>
+            </div>
+          
+          <table id="tableAtv" class="table table-striped table-bordered table-sm ">
+            
+            <thead>
+              <tr>
+                <th scope="col">Tempo</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Data</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+          <tbody>
+            <tr id="cloneButton">
+              <th>0</th>
+              <th>Sem eventos</th>
+              <th>0000-00-00</th>
+              <th><button type="button" id="DelB" on click="EventoDel()">Cencelar</button></th>
+            </tr>
+          </tbody>
+          </table>
+       </fieldset>
+   </form>
+   <script src="js/app.js"></script>
+</body>
+</html>
